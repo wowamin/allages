@@ -11,20 +11,31 @@
 }
 
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/BANNER_1920.jpg');
+  background: url('../image/BANNER_1920.jpg');
   background-size: cover;
   background-position: center;
-  height: auto;
+  height: 500px;
   display: flex;
   align-items: center;
   color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+.hero-section > .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* 平板裝置 (768px 到 1024px) */
 @media (max-width: 1024px) {
   .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/BANNER_1024.jpg');
-    height: auto;
+    background-image: url('../image/BANNER_1024.jpg');
+    height: 400px;
   }
   
   .hero-section h1 {
@@ -39,8 +50,12 @@
 /* 手機裝置 (小於 768px) */
 @media (max-width: 768px) {
   .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/BANNER_768.jpg');
-    height: auto;
+    background-image: url('../image/BANNER_768.jpg');
+    height: 300px;
+  }
+  
+  .hero-section::before {
+    display: none;
   }
   
   .hero-section h1 {
@@ -55,8 +70,12 @@
 /* 小型手機 (小於 576px) */
 @media (max-width: 576px) {
   .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/BANNER_576.jpg');
-    height: auto;
+    background-image: url('../image/BANNER_576.jpg');
+    height: 250px;
+  }
+  
+  .hero-section::before {
+    display: none;
   }
   
   .hero-section h1 {
