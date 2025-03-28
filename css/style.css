@@ -10,6 +10,44 @@
   object-fit: contain;
 }
 
+/* 影片區塊樣式 */
+.video-container {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+}
+
+/* 在手機版縮小視頻高度 */
+@media (max-width: 576px) {
+  #video-intro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  #video-intro h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #video-intro .lead {
+    font-size: 0.9rem;
+  }
+}
+
+/* 不同區塊背景交替 */
+#video-intro {
+  background-color: #f8f9fa;
+}
+
+#about {
+  background-color: #ffffff;
+}
+
 .carousel-item {
   position: relative;
   height: 500px;
