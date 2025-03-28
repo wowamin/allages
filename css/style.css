@@ -151,7 +151,7 @@
 /* 手機裝置 (小於 768px) */
 @media (max-width: 768px) {
   .carousel-item {
-    height: 350px;
+    height: 400px;
   }
   
   .carousel-caption {
@@ -173,7 +173,7 @@
 /* 小型手機 (小於 576px) */
 @media (max-width: 576px) {
   .carousel-item {
-    height: 250px;
+    height: 400px;
   }
   
   .carousel-caption {
@@ -195,7 +195,7 @@
 /* 特小型手機 (小於 375px) */
 @media (max-width: 375px) {
   .carousel-item {
-    height: 200px;
+    height: 400px;
   }
   
   .carousel-caption {
