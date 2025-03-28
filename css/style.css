@@ -59,10 +59,10 @@
 @media (max-width: 768px) {
   .hero-section {
     background-image: url('../image/BANNER_768.jpg');
+    background-size: contain;
     height: 300px;
-    background-position: center top;
+    background-position: center;
     width: 100%;
-    min-height: 300px;
   }
   
   .hero-section h1 {
@@ -80,9 +80,9 @@
 @media (max-width: 576px) {
   .hero-section {
     background-image: url('../image/BANNER_576.jpg');
-    height: 250px;
-    background-position: center top;
-    min-height: 250px;
+    background-size: contain;
+    height: 200px;
+    background-position: center;
   }
   
   .hero-section h1 {
