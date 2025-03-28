@@ -1,3 +1,5 @@
+
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -348,7 +350,7 @@
 }
 
 .contact-card .card-header {
-  background-color: #2a70b8;
+  background-color: #B5AB92;
   color: white;
   padding: 15px 20px;
   border-bottom: none;
@@ -385,7 +387,7 @@
 
 .transportation-text h5 {
   font-size: 1.1rem;
-  color: #2a70b8;
+  color: #B5AB92;
 }
 
 .map-overlay {
