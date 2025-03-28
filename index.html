@@ -137,24 +137,35 @@
     <section id="video-intro" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-5">診所介紹影片</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <div class="video-container">
-              <div class="ratio ratio-16x9">
-                <iframe src="https://youtu.be/36J6pnP6sLk?si=HoaTiIWu_cWB3RpG" title="診所介紹影片" allowfullscreen></iframe>
-              </div>
-            </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <h3>專業醫療服務，照顧您全家健康</h3>
+            <p class="lead mb-4">樂活全齡綜合診所提供家庭醫學、復健科、皮膚科等多元診療服務，由專業醫師團隊為您量身打造健康照護方案。</p>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>家庭醫學專科醫師親自診療</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>便利的交通位置，備有停車空間</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>溫馨舒適的診所環境</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>多元化的醫療服務</li>
+            </ul>
+            <button class="btn btn-primary" onclick="window.location.href='#contact'">立即聯絡我們</button>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 mb-4">
             <div class="video-container">
+              <!-- 直接嵌入影片 -->
               <div class="ratio ratio-16x9">
-                <iframe src="https://www.youtube.com/embed/XA_Xf_jwS_k?si=b48YyJ5kd1jAv8VT" title="診所介紹影片" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WRP4-jCS-mU?si=tU2vmrfPESZOVAwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div class="text-center mt-3">
+                <a href="https://youtu.be/WRP4-jCS-mU" target="_blank" class="btn btn-primary">
+                  <i class="bi bi-youtube me-2"></i>在 YouTube 觀看
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
 
     <!-- 關於我們 -->
     <!-- <section id="about" class="py-5 bg-light">
@@ -169,62 +180,63 @@
     </section> -->
 
     <!-- 聯絡我們 -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5 bg-light">
       <div class="container">
         <h2 class="text-center mb-5">聯絡我們</h2>
         <div class="row">
-          <div class="col-md-6">
-            <h4>診所資訊</h4>
-            <p><i class="bi bi-geo-alt"></i> 地址：臺南市仁德區中正路二段1225號</p>
-            <p><i class="bi bi-telephone"></i> 電話：06-2791515</p>
-            <p><i class="bi bi-clock"></i> 營業時間：</p>
-            <div class="table-responsive">
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <th>時段</th>
-                    <th>一</th>
-                    <th>二</th>
-                    <th>三</th>
-                    <th>四</th>
-                    <th>五</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>上午 09:00-12:00</td>
-                    <td>●</td>
-                    <td>●</td>
-                    <td>●</td>
-                    <td>●</td>
-                    <td>●</td>
-                  </tr>
-                  <tr>
-                    <td>下午 14:30-17:30</td>
-                    <td>●</td>
-                    <td>●</td>
-                    <td>●</td>
-                    <td>隔週看診</td>
-                    <td>隔週看診</td>
-                  </tr>
-                  <tr>
-                    <td>晚上 18:00-20:30</td>
-                    <td>●</td>
-                    <td></td>
-                    <td></td>
-                    <td>●</td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
+          <div class="col-md-6 mb-4">
+            <div class="contact-card">
+              <div class="card-header">
+                <h4><i class="bi bi-hospital me-2"></i>診所資訊</h4>
+              </div>
+              <div class="card-body">
+                <div class="contact-info mb-3">
+                  <p><i class="bi bi-geo-alt-fill text-primary me-2"></i> 地址：<strong>臺南市仁德區中正路二段1225號</strong></p>
+                  <p><i class="bi bi-telephone-fill text-primary me-2"></i> 電話：<strong>06-2791515</strong></p>
+                  <p><i class="bi bi-clock-fill text-primary me-2"></i> 營業時間：</p>
+                </div>
+                <div class="schedule-container mt-3 mb-4">
+                  <img src="image/list.jpg" alt="診所營業時間表" class="img-fluid rounded schedule-image">
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <h4>加入官方LINE</h4>
-            <img src="image/line-qr.jpg" alt="LINE QR Code" class="img-fluid" style="max-width: 200px;">
-            <h4 class="mt-4">交通方式</h4>
-            <p>便利的交通位置，歡迎來院就診</p>
-            <p>備有停車空間</p>
+          <div class="col-md-6 mb-4">
+            <div class="contact-card">
+              <div class="card-header">
+                <h4><i class="bi bi-pin-map-fill me-2"></i>交通方式</h4>
+              </div>
+              <div class="card-body">
+                <div class="transportation-info mb-3">
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="transportation-icon">
+                      <i class="bi bi-car-front-fill text-primary"></i>
+                    </div>
+                    <div class="transportation-text">
+                      <h5 class="mb-0">自行開車</h5>
+                      <p class="mb-0">便利的交通位置，備有停車空間</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="transportation-icon">
+                      <i class="bi bi-bus-front-fill text-primary"></i>
+                    </div>
+                    <div class="transportation-text">
+                      <h5 class="mb-0">大眾運輸</h5>
+                      <p class="mb-0">鄰近公車站牌，交通便利</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-container">
+                  <img src="image/map.jpg" alt="診所位置" class="img-fluid rounded schedule-image">
+                  <div class="map-overlay">
+                    <a href="https://maps.app.goo.gl/xYZaBcd123" target="_blank" class="btn btn-primary mt-3">
+                      <i class="bi bi-geo-alt me-2"></i>Google 地圖導航
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

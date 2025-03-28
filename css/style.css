@@ -16,10 +16,61 @@
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  padding: 0;
 }
 
-.video-container:hover {
-  transform: translateY(-5px);
+.video-container img {
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.video-container img:hover {
+  transform: scale(1.03);
+}
+
+.video-container .text-center {
+  padding: 15px;
+  background-color: #f8f9fa;
+}
+
+.video-thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover .video-thumbnail-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#videoModal .modal-content {
+  background-color: #000;
+  border: none;
+}
+
+#videoModal .modal-header {
+  background-color: #1a1a1a;
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+#videoModal .btn-close {
+  color: white;
+  filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 /* 在手機版縮小視頻高度 */
@@ -237,5 +288,141 @@
   .aboutdoctor {
     height: 200px;
     background-image: url('../image/BANNER_375.jpg');
+  }
+}
+
+/* 確保比例正確 */
+.ratio-16x9 {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 比例 */
+}
+
+.ratio-16x9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 診療時間表樣式 */
+.schedule-container {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.schedule-image {
+  width: 100%;
+  display: block;
+}
+
+.schedule-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 576px) {
+  .schedule-container {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* 聯絡我們區塊樣式 */
+.contact-card {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: #fff;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact-card .card-header {
+  background-color: #2a70b8;
+  color: white;
+  padding: 15px 20px;
+  border-bottom: none;
+}
+
+.contact-card .card-header h4 {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+.contact-card .card-body {
+  padding: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+.transportation-icon {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(42, 112, 184, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.transportation-icon i {
+  font-size: 1.5rem;
+}
+
+.transportation-text h5 {
+  font-size: 1.1rem;
+  color: #2a70b8;
+}
+
+.map-overlay {
+  text-align: center;
+  padding: 15px 0 5px;
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    margin-bottom: 20px;
+  }
+  
+  .contact-card .card-header h4 {
+    font-size: 1.2rem;
+  }
+  
+  .contact-info p, .transportation-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-card .card-header {
+    padding: 12px 15px;
+  }
+  
+  .contact-card .card-body {
+    padding: 15px;
+  }
+  
+  .transportation-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .transportation-icon i {
+    font-size: 1.3rem;
   }
 }
