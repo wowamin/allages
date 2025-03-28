@@ -281,7 +281,7 @@
 /* 小型手機 (小於 576px) */
 @media (max-width: 576px) {
   .aboutdoctor {
-    height: 500px;
+    height: 350px;
     background-image: url('../image/BANNER_576.jpg');
   }
 }
@@ -289,7 +289,7 @@
 /* 特小型手機 (小於 375px) */
 @media (max-width: 375px) {
   .aboutdoctor {
-    height: 500px;
+    height: 350px;
     background-image: url('../image/BANNER_375.jpg');
   }
 }
