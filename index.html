@@ -44,11 +44,45 @@
     </nav>
 
     <!-- 首頁橫幅 -->
-    <section id="home" class="hero-section">
-      <div class="container text-center">
-        <!-- <h1 class="display-4">樂活全齡 照顧全民</h1> -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <picture>
+            <source media="(max-width: 375px)" srcset="image/BANNER_375.jpg">
+            <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+            <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+            <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="診所環境">
+          </picture>
+          
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 375px)" srcset="image/BANNER_375.jpg">
+            <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+            <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+            <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="診所環境">
+          </picture>
+          
+        </div>
+        <div class="carousel-item">
+          <picture>
+            <source media="(max-width: 375px)" srcset="image/BANNER_375.jpg">
+            <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+            <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+            <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="診所環境">
+          </picture>
+          
+        </div>
       </div>
-    </section>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">上一張</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">下一張</span>
+      </button>
+    </div>
 
     <!-- 服務項目 -->
     <section id="services" class="py-5">
@@ -100,13 +134,8 @@
       <div class="container">
         <h2 class="text-center mb-5">關於全齡</h2>
         <div class="row align-items-center">
-          <div class="col-md-6">
-            <a href=""><img src="image/A001.jpg" class="img-fluid rounded about-image" alt="診所環境"></a>
-          </div>
-          <div class="col-md-6">
-            <h3>沈子翔 醫師</h3>
-            <p class="mb-2">台灣家庭醫學會 家庭醫學專科醫師</p>
-            <p>樂活全齡綜合診所擁有經驗豐富的醫療團隊，提供包含三高、感冒、皮膚、腸胃、骨科、復健等多元化的診療服務。我們秉持「樂活全齡 照顧全民」的理念，致力於為每位病患提供最優質的醫療服務。</p>
+          <div class="col-md">
+            <div class="aboutdoctor"></div>
           </div>
         </div>
       </div>
