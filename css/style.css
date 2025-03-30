@@ -197,8 +197,8 @@ h2{
   }
 }
 
-/* 特小型手機 (小於 375px) */
-@media (max-width: 375px) {
+/* 特小型手機 (小於 393px) */
+@media (max-width: 393px) {
   .carousel-item {
     height: 500px;
   }
@@ -391,3 +391,7 @@ h2{
     font-size: 1.3rem;
   }
 }
+
+
+@media only screen and (min-height: 852px) and (orientation: portrait)
+{ /* Your Styles... */ }
