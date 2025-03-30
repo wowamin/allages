@@ -17,6 +17,9 @@ h2{
   object-fit: contain;
 }
 
+.mb-0 {
+  line-height: 1.8;
+}
 
 
 /* 不同區塊背景交替 */
@@ -338,9 +341,9 @@ h2{
 }
 
 .transportation-icon {
-  width: 45px;
-  height: 45px;
-  background-color: rgba(42, 112, 184, 0.1);
+  width: 35px;
+  height: 35px;
+  background-color:  #B5AB92;
   border-radius: 50%;
   display: flex;
   align-items: center;
