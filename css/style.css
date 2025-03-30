@@ -17,85 +17,7 @@ h2{
   object-fit: contain;
 }
 
-/* 影片區塊樣式 */
-.video-container {
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  padding: 0;
-}
 
-.video-container img {
-  transition: transform 0.5s ease;
-  display: block;
-}
-
-.video-container img:hover {
-  transform: scale(1.03);
-}
-
-.video-container .text-center {
-  padding: 15px;
-  background-color: #f8f9fa;
-}
-
-.video-thumbnail-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 60px);
-  background: rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.video-container:hover .video-thumbnail-overlay {
-  opacity: 1;
-}
-
-.play-icon {
-  font-size: 4rem;
-  color: white;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-#videoModal .modal-content {
-  background-color: #000;
-  border: none;
-}
-
-#videoModal .modal-header {
-  background-color: #1a1a1a;
-  color: white;
-  border-bottom: 1px solid #333;
-}
-
-#videoModal .btn-close {
-  color: white;
-  filter: invert(1) grayscale(100%) brightness(200%);
-}
-
-/* 在手機版縮小視頻高度 */
-@media (max-width: 576px) {
-  #video-intro {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-  
-  #video-intro h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  #video-intro .lead {
-    font-size: 0.9rem;
-  }
-}
 
 /* 不同區塊背景交替 */
 #video-intro {
@@ -219,6 +141,87 @@ h2{
   }
 }
 
+
+/* 影片區塊樣式 */
+.video-container {
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 0;
+}
+
+.video-container img {
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.video-container img:hover {
+  transform: scale(1.03);
+}
+
+.video-container .text-center {
+  padding: 15px;
+  background-color: #f8f9fa;
+}
+
+.video-thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover .video-thumbnail-overlay {
+  opacity: 1;
+}
+
+.play-icon {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#videoModal .modal-content {
+  background-color: #000;
+  border: none;
+}
+
+#videoModal .modal-header {
+  background-color: #1a1a1a;
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+#videoModal .btn-close {
+  color: white;
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* 在手機版縮小視頻高度 */
+@media (max-width: 576px) {
+  #video-intro {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  #video-intro h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #video-intro .lead {
+    font-size: 0.9rem;
+  }
+}
+
 .service-card {
   transition: transform 0.3s;
 }
@@ -296,6 +299,7 @@ h2{
     margin-bottom: 1.5rem;
   }
 }
+
 
 /* 聯絡我們區塊樣式 */
 .contact-card {
