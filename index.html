@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description" content="樂活全齡綜合診所提供家庭醫學、皮膚科等多元診療服務，由專業醫師團隊為您量身打造健康照護方案。">
+    <meta name="keywords" content="診所,家庭醫學,醫療服務,健康照護,皮膚科">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- iOS 設備特定樣式修正 -->
+    <style>
+      /* 針對 iOS 設備的修正 */
+      @supports (-webkit-touch-callout: none) {
+        .carousel-item {
+          height: 500px !important;
+          overflow: visible !important;
+        }
+        
+        .carousel-item img {
+          height: 100% !important;
+          object-fit: cover;
+          object-position: center top !important; /* 顯示圖片頂部 */
+          width: 100%;
+          transform: none !important;
+          max-width: 100%;
+        }
+
+        /* 修正 iOS Safari 上的輪播固定高度問題 */
+        picture {
+          display: block;
+          height: 100%;
+        }
+        
+        /* 確保輪播容器不會被截斷 */
+        .carousel {
+          max-height: 500px;
+          overflow: visible;
+        }
+      }
+    </style>
+
+    <!-- Preconnect 提前建立連接 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <title>樂活全齡 照顧全民</title>
+    
+  </head>
+  <body>
+     <!-- 導航欄 -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./image/logo01.png" alt="樂活全齡綜合診所 Logo">
+          <span>樂活全齡綜合診所</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">首頁</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">關於全齡</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">診療項目</a>
+              
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="doctor.html">醫師介紹</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#video-intro">衛教宣導</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">聯絡我們</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 首頁橫幅 -->
+    <section id="home">
+      <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carouselExampleFade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <picture>
+              <source media="(max-width: 320px)" srcset="image/BANNER_320.jpg">
+              <source media="(max-width: 430px)" srcset="image/BANNER_430.jpg">
+              <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+              <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+              <source media="(max-width: 1024px)" srcset="image/BANNER_1024.jpg">
+              <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="eager" decoding="async">
+            </picture>
+          </div>
+          <div class="carousel-item">
+            <picture>
+              <source media="(max-width: 320px)" srcset="image/BANNER_320.jpg">
+              <source media="(max-width: 430px)" srcset="image/BANNER_430.jpg">
+              <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+              <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+              <source media="(max-width: 1024px)" srcset="image/BANNER_1024.jpg">
+              <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="carousel-item">
+            <picture>
+              <source media="(max-width: 320px)" srcset="image/BANNER_320.jpg">
+              <source media="(max-width: 430px)" srcset="image/BANNER_430.jpg">
+              <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+              <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+              <source media="(max-width: 1024px)" srcset="image/BANNER_1024.jpg">
+              <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">上一張</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">下一張</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 服務項目 -->
+    <section id="services" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 fade-in">診療項目</h2>
+                                                                                                                                                                                                                                                                                                                                                                                      
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <div class="card service-card h-100 fade-in" style="animation-delay: 0.1s;">
+              <div class="card-body text-center">
+                <i class="fa-solid fa-hand-dots display-4 mb-3"></i>
+                <h5 class="card-title">青春痘及皮膚疾病</h5>
+                <p class="card-text">專業皮膚診療，解決各類皮膚問題</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card service-card h-100 fade-in" style="animation-delay: 0.2s;">
+              <div class="card-body text-center">
+                <i class="bi bi-people display-4 mb-3"></i>
+                <h5 class="card-title">家庭醫學及兒科疾病</h5>
+                <p class="card-text">全家人的健康守護者</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card service-card h-100 fade-in" style="animation-delay: 0.3s;">
+              <div class="card-body text-center">
+                <i class="fas fa-pills display-4 mb-3"></i>
+                <h5 class="card-title">慢性病整合醫療</h5>
+                <p class="card-text">專業的慢性病照護和用藥指導</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4">
+            <div class="card service-card h-100 fade-in" style="animation-delay: 0.4s;">
+              <div class="card-body text-center">
+                <i class="bi bi-shield-check display-4 mb-3"></i>
+                <h5 class="card-title">社區與預防醫學</h5>
+                <p class="card-text">預防保健，守護社區健康</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- 影片介紹 -->
+    <section id="video-intro" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fade-in">診所介紹影片</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <h3>專業醫療服務，照顧您全家健康</h3>
+            <p class="lead mb-4">樂活全齡綜合診所提供家庭醫學、復健科、皮膚科等多元診療服務，由專業醫師團隊為您量身打造健康照護方案。</p>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>家庭醫學專科醫師親自診療</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>便利的交通位置，備有停車空間</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>溫馨舒適的診所環境</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>多元化的醫療服務</li>
+            </ul>
+            <button class="btn btn-success" onclick="window.location.href='#contact'">立即聯絡我們</button>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="video-container">
+              <!-- 直接嵌入影片 -->
+              <div class="ratio ratio-16x9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/WRP4-jCS-mU?si=tU2vmrfPESZOVAwW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+ 
+
+</div>
+    <!-- 聯絡我們 -->
+    <section id="contact" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 fade-in">聯絡我們</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="contact-card">
+              <div class="card-header">
+                <h4><i class="bi bi-hospital me-2"></i>診所資訊</h4>
+              </div>
+              <div class="card-body">
+                <div class="contact-info mb-3">
+                  <p><i class="bi bi-geo-alt-fill text-gray me-2"></i> 地址：<strong>臺南市仁德區中正路二段1225號</strong></p>
+                  <p><i class="bi bi-telephone-fill text-gray me-2"></i> 電話：<strong>06-2791515</strong></p>
+                  <p><i class="bi bi-clock-fill text-gray me-2"></i> 營業時間：</p>
+                </div>
+                <div class="schedule-container mt-3 mb-4">
+                  <img src="image/list.jpg" alt="診所營業時間表" class="img-fluid rounded schedule-image">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="contact-card">
+              <div class="card-header">
+                <h4><i class="bi bi-pin-map-fill me-2"></i>交通方式</h4>
+              </div>
+              <div class="card-body">
+                <div class="transportation-info mb-3">
+                  <div class="d-flex align-items-center mb-2">
+                    <div class="transportation-icon">
+                      <i class="bi bi-car-front-fill text-primary"></i>
+                    </div>
+                    <div class="transportation-text">
+                      <h5 class="mb-0">自行開車</h5>
+                      <p class="mb-0">便利的交通位置，備有停車空間</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="transportation-icon">
+                      <i class="bi bi-bus-front-fill text-primary"></i>
+                    </div>
+                    <div class="transportation-text">
+                      <h5 class="mb-0">大眾運輸</h5>
+                      <p class="mb-0">鄰近公車站牌，交通便利</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-container">
+                  <img src="image/map.jpg" alt="診所位置" class="img-fluid rounded schedule-image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-12 text-center">
+            <a href="contact.html" class="btn btn-primary btn-lg">前往聯絡我們頁面</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Logo區域 -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <div class="footer-logo-container">
+              <img src="./image/logo01.png" alt="樂活全齡綜合診所 Logo" class="footer-logo">
+              <h5 class="text-white mt-3">樂活全齡綜合診所</h5>
+              <p class="text-light small mt-2">專業醫療服務，照顧您全家健康</p>
+            </div>
+          </div>
+          
+          <!-- 網站導覽 -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-white mb-3">網站導覽</h5>
+            <ul class="list-unstyled footer-nav">
+              <li class="mb-2"><a href="#home"><i class="fa-solid fa-house me-2"></i>首頁</a></li>
+              <li class="mb-2"><a href="#about"><i class="bi bi-info-circle me-2"></i>關於全齡</a></li>
+              <li class="mb-2"><a href="#services"><i class="fa-solid fa-list me-2"></i>診療項目</a></li>
+              <li class="mb-2"><a href="aboutus.html"><i class="fa-solid fa-stethoscope me-2"></i>醫師介紹</a></li>
+              <li class="mb-2"><a href="#video-intro"><i class="bi bi-play-circle me-2"></i>衛教宣導</a></li>
+              <li class="mb-2"><a href="#contact"><i class="fa-solid fa-envelope me-2"></i>聯絡我們</a></li>
+            </ul>
+          </div>
+          
+          <!-- 聯絡資訊 -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-white mb-3">聯絡資訊</h5>
+            <ul class="list-unstyled footer-contact">
+              <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>臺南市仁德區中正路二段1225號</li>
+              <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i>06-2791515</li>
+            </ul>
+          </div>
+          
+          <!-- 社群連結 -->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-white mb-3">關注我們</h5>
+            <div class="social-icons">
+              <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="me-2"><i class="bi bi-line"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="footer-divider my-4">
+        
+        <!-- 版權聲明 -->
+        <div class="row">
+          <div class="col-12 text-center">
+            <p class="mb-1 small">禁止任何網際網路服務業者轉錄其網路資訊之內容供人點閱。(但以網路搜尋或超連結方式，進入醫療機構之網址(域)直接點閱者，不在此限)</p>
+            <p class="mb-0 small">© 2025 樂活全齡綜合診所 All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 添加頁尾信息 -->
+    <div class="to-top-container">
+      <a href="#" class="to-top-button"><i class="bi bi-arrow-up-circle-fill"></i></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+      // 檢測 iPhone 設備並應用額外樣式修正
+      document.addEventListener('DOMContentLoaded', function() {
+        // 檢測是否為 iOS 設備
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        
+        // 更強力的 iPhone 15 處理
+        const isIPhone = /iPhone/.test(navigator.userAgent);
+        
+        if (isIOS || isIPhone) {
+          console.log("iOS 設備檢測成功，正在應用修復...");
+          
+          // 為輪播容器添加樣式
+          const carousel = document.querySelector('.carousel');
+          if (carousel) {
+            carousel.style.maxHeight = '500px';
+          }
+          
+          // 為 carousel 項目添加特定樣式
+          const carouselItems = document.querySelectorAll('.carousel-item');
+          carouselItems.forEach(item => {
+            item.style.height = '500px';
+            item.style.overflow = 'visible';
+            console.log("已設置輪播項目高度為 500px");
+          });
+          
+          // 為輪播圖片添加特定樣式
+          const carouselImages = document.querySelectorAll('.carousel-item img');
+          carouselImages.forEach(img => {
+            img.style.objectPosition = 'center top';
+            img.style.transform = 'none';
+            img.style.height = '100%';
+            
+            // 強制重新加載圖片，避免緩存問題
+            const currentSrc = img.src;
+            const timestamp = new Date().getTime();
+            
+            // 先解除 src，然後設置新的 src 以強制重新載入
+            img.removeAttribute('src');
+            
+            // 使用 setTimeout 確保瀏覽器有時間處理 DOM 更改
+            setTimeout(() => {
+              // 添加時間戳參數以避免緩存
+              if (currentSrc.includes('?')) {
+                img.src = currentSrc.split('?')[0] + '?v=' + timestamp;
+              } else {
+                img.src = currentSrc + '?v=' + timestamp;
+              }
+              console.log("已重新加載圖片: " + img.src);
+            }, 50);
+          });
+          
+          // 添加調試信息到頁面（僅在測試時啟用）
+          /*
+          const debugInfo = document.createElement('div');
+          debugInfo.style.position = 'fixed';
+          debugInfo.style.bottom = '0';
+          debugInfo.style.left = '0';
+          debugInfo.style.backgroundColor = 'rgba(0,0,0,0.7)';
+          debugInfo.style.color = 'white';
+          debugInfo.style.padding = '5px';
+          debugInfo.style.fontSize = '10px';
+          debugInfo.style.zIndex = '9999';
+          debugInfo.innerHTML = `螢幕: ${window.innerWidth}x${window.innerHeight}<br>
+                                UA: ${navigator.userAgent.substring(0, 50)}...`;
+          document.body.appendChild(debugInfo);
+          */
+        }
+      });
+    </script>
+  </body>
+</html>
