@@ -157,7 +157,7 @@ h2 {
 /* 超小型手機 (更窄屏幕) */
 @media (max-width: 320px) {
   .carousel-item {
-    height:500px;
+    height:500px !important;
   }
 
   .carousel-caption {
