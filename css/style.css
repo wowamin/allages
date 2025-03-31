@@ -45,12 +45,31 @@ h2 {
 .carousel-item {
   position: relative;
   height: 600px;
+  overflow: hidden;
 }
 
 .carousel-item img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* 為所有輪播圖添加圖片預加載，提高性能 */
+@media (prefers-reduced-motion: no-preference) {
+  .carousel-item img {
+    image-rendering: auto;
+  }
+}
+
+/* 為所有圖片添加平滑過渡 */
+.carousel-inner {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .carousel-caption {
@@ -136,25 +155,61 @@ h2 {
 /* 特小型手機 (小於 393px) */
 @media (max-width: 393px) {
   .carousel-item {
-    height: 200px;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
   }
   
   .carousel-caption {
     padding: 8px;
     bottom: 15%;
+    left: 5%;
+    right: 5%;
   }
   
   .carousel-caption h1 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: 0.2rem;
   }
   
   .carousel-caption .lead {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-bottom: 0;
+  }
+
+  /* 讓輪播導航按鈕更小 */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
   }
 }
 
+/* 超小型手機 (更窄屏幕) */
+@media (max-width: 320px) {
+  .carousel-item {
+    height: 150px;
+  }
+
+  .carousel-caption {
+    padding: 5px;
+    bottom: 10%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1rem;
+  }
+
+  .carousel-caption .lead {
+    font-size: 0.6rem;
+  }
+}
 
 /* 影片區塊樣式 */
 .video-container {
