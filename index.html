@@ -14,6 +14,32 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- iOS 設備特定樣式修正 -->
+    <style>
+      /* 針對 iOS 設備的修正 */
+      @supports (-webkit-touch-callout: none) {
+        .carousel-item {
+          height: 250px !important;
+          overflow: visible !important;
+        }
+        
+        .carousel-item img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center 20%;
+          width: 100%;
+          transform: none;
+          max-width: 100%;
+        }
+
+        /* 修正 iOS Safari 上的輪播固定高度問題 */
+        picture {
+          display: block;
+          height: 100%;
+        }
+      }
+    </style>
+
     <!-- Preconnect 提前建立連接 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
@@ -64,31 +90,31 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <picture>
-              <source media="(max-width: 320px)" srcset="image/320.jpg">
-              <source media="(max-width: 430px)" srcset="image/430.jpg">
-              <source media="(max-width: 576px)" srcset="image/576.jpg">
-              <source media="(max-width: 768px)" srcset="image/768.jpg">
-              <source media="(max-width: 1024px)" srcset="image/1024.jpg">
+              <source media="(max-width: 320px)" srcset="image/BANNER_320.jpg">
+              <source media="(max-width: 430px)" srcset="image/BANNER_430.jpg">
+              <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+              <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+              <source media="(max-width: 1024px)" srcset="image/BANNER_1024.jpg">
               <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="eager" decoding="async">
             </picture>
           </div>
           <div class="carousel-item">
             <picture>
-              <source media="(max-width: 320px)" srcset="image/320.jpg">
-              <source media="(max-width: 430px)" srcset="image/430.jpg">
-              <source media="(max-width: 576px)" srcset="image/576.jpg">
-              <source media="(max-width: 768px)" srcset="image/768.jpg">
-              <source media="(max-width: 1024px)" srcset="image/1024.jpg">
+              <source media="(max-width: 320px)" srcset="image/BANNER_320.jpg">
+              <source media="(max-width: 430px)" srcset="image/BANNER_430.jpg">
+              <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+              <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+              <source media="(max-width: 1024px)" srcset="image/BANNER_1024.jpg">
               <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="lazy" decoding="async">
             </picture>
           </div>
           <div class="carousel-item">
             <picture>
-              <source media="(max-width: 320px)" srcset="image/320.jpg">
-              <source media="(max-width: 430px)" srcset="image/430.jpg">
-              <source media="(max-width: 576px)" srcset="image/576.jpg">
-              <source media="(max-width: 768px)" srcset="image/768.jpg">
-              <source media="(max-width: 1024px)" srcset="image/1024.jpg">
+              <source media="(max-width: 320px)" srcset="image/BANNER_320.jpg">
+              <source media="(max-width: 430px)" srcset="image/BANNER_430.jpg">
+              <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
+              <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
+              <source media="(max-width: 1024px)" srcset="image/BANNER_1024.jpg">
               <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="lazy" decoding="async">
             </picture>
           </div>
@@ -312,5 +338,36 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+      // 檢測 iOS 設備並應用額外樣式修正
+      document.addEventListener('DOMContentLoaded', function() {
+        // 檢測是否為 iOS 設備
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        
+        if (isIOS) {
+          // 為 carousel 項目添加特定樣式
+          const carouselItems = document.querySelectorAll('.carousel-item');
+          carouselItems.forEach(item => {
+            item.style.height = '250px';
+            item.style.overflow = 'visible';
+          });
+          
+          // 為輪播圖片添加特定樣式
+          const carouselImages = document.querySelectorAll('.carousel-item img');
+          carouselImages.forEach(img => {
+            img.style.objectPosition = 'center 20%';
+            img.style.transform = 'none';
+            
+            // 強制重新加載圖片，避免緩存問題
+            const currentSrc = img.src;
+            img.src = '';
+            setTimeout(() => {
+              img.src = currentSrc + '?v=' + new Date().getTime();
+            }, 10);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
