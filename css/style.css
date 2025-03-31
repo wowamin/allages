@@ -152,43 +152,9 @@ h2 {
   }
 }
 
-/* 特小型手機 (小於 393px) */
+/* 特小型手機 (小於 393px)，這個設定將被下方iPhone設定覆蓋 */
 @media (max-width: 393px) {
-  .carousel-item {
-    height: 180px;
-    overflow: hidden;
-  }
-  
-  .carousel-item img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-  }
-  
-  .carousel-caption {
-    padding: 8px;
-    bottom: 15%;
-    left: 5%;
-    right: 5%;
-  }
-  
-  .carousel-caption h1 {
-    font-size: 1.1rem;
-    margin-bottom: 0.2rem;
-  }
-  
-  .carousel-caption .lead {
-    font-size: 0.7rem;
-    margin-bottom: 0;
-  }
-
-  /* 讓輪播導航按鈕更小 */
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-  }
+  /* 移除此處的設定，全部移到下方iPhone設定中 */
 }
 
 /* 超小型手機 (更窄屏幕) */
@@ -223,7 +189,7 @@ h2 {
     object-fit: cover;
     object-position: center;
     width: 100%;
-    transform: scale(1.1);
+    transform: scale(1.01); /* 略微縮小比例，避免內容被裁剪 */
   }
   
   .carousel-caption {
