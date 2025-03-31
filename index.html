@@ -19,16 +19,16 @@
       /* 針對 iOS 設備的修正 */
       @supports (-webkit-touch-callout: none) {
         .carousel-item {
-          height: 250px !important;
+          height: 500px !important;
           overflow: visible !important;
         }
         
         .carousel-item img {
-          height: 100%;
+          height: 100% !important;
           object-fit: cover;
-          object-position: center 20%;
+          object-position: center top !important; /* 顯示圖片頂部 */
           width: 100%;
-          transform: none;
+          transform: none !important;
           max-width: 100%;
         }
 
@@ -36,6 +36,12 @@
         picture {
           display: block;
           height: 100%;
+        }
+        
+        /* 確保輪播容器不會被截斷 */
+        .carousel {
+          max-height: 500px;
+          overflow: visible;
         }
       }
     </style>
@@ -339,33 +345,73 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
-      // 檢測 iOS 設備並應用額外樣式修正
+      // 檢測 iPhone 設備並應用額外樣式修正
       document.addEventListener('DOMContentLoaded', function() {
         // 檢測是否為 iOS 設備
         const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
                       (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
         
-        if (isIOS) {
+        // 更強力的 iPhone 15 處理
+        const isIPhone = /iPhone/.test(navigator.userAgent);
+        
+        if (isIOS || isIPhone) {
+          console.log("iOS 設備檢測成功，正在應用修復...");
+          
+          // 為輪播容器添加樣式
+          const carousel = document.querySelector('.carousel');
+          if (carousel) {
+            carousel.style.maxHeight = '500px';
+          }
+          
           // 為 carousel 項目添加特定樣式
           const carouselItems = document.querySelectorAll('.carousel-item');
           carouselItems.forEach(item => {
-            item.style.height = '250px';
+            item.style.height = '500px';
             item.style.overflow = 'visible';
+            console.log("已設置輪播項目高度為 500px");
           });
           
           // 為輪播圖片添加特定樣式
           const carouselImages = document.querySelectorAll('.carousel-item img');
           carouselImages.forEach(img => {
-            img.style.objectPosition = 'center 20%';
+            img.style.objectPosition = 'center top';
             img.style.transform = 'none';
+            img.style.height = '100%';
             
             // 強制重新加載圖片，避免緩存問題
             const currentSrc = img.src;
-            img.src = '';
+            const timestamp = new Date().getTime();
+            
+            // 先解除 src，然後設置新的 src 以強制重新載入
+            img.removeAttribute('src');
+            
+            // 使用 setTimeout 確保瀏覽器有時間處理 DOM 更改
             setTimeout(() => {
-              img.src = currentSrc + '?v=' + new Date().getTime();
-            }, 10);
+              // 添加時間戳參數以避免緩存
+              if (currentSrc.includes('?')) {
+                img.src = currentSrc.split('?')[0] + '?v=' + timestamp;
+              } else {
+                img.src = currentSrc + '?v=' + timestamp;
+              }
+              console.log("已重新加載圖片: " + img.src);
+            }, 50);
           });
+          
+          // 添加調試信息到頁面（僅在測試時啟用）
+          /*
+          const debugInfo = document.createElement('div');
+          debugInfo.style.position = 'fixed';
+          debugInfo.style.bottom = '0';
+          debugInfo.style.left = '0';
+          debugInfo.style.backgroundColor = 'rgba(0,0,0,0.7)';
+          debugInfo.style.color = 'white';
+          debugInfo.style.padding = '5px';
+          debugInfo.style.fontSize = '10px';
+          debugInfo.style.zIndex = '9999';
+          debugInfo.innerHTML = `螢幕: ${window.innerWidth}x${window.innerHeight}<br>
+                                UA: ${navigator.userAgent.substring(0, 50)}...`;
+          document.body.appendChild(debugInfo);
+          */
         }
       });
     </script>

@@ -96,7 +96,7 @@ h2 {
 /* 平板裝置 (768px 到 1024px) */
 @media (max-width: 1024px) {
   .carousel-item {
-    height: 600px;
+    height: 500px;
   }
   
   .carousel-caption h1 {
@@ -111,7 +111,7 @@ h2 {
 /* 手機裝置 (小於 768px) */
 @media (max-width: 768px) {
   .carousel-item {
-    height: 600px;
+    height: 500px;
   }
   
   .carousel-caption {
@@ -152,12 +152,15 @@ h2 {
   }
 }
 
-
+/* 特小型手機 (小於 393px)，這個設定將被下方iPhone設定覆蓋 */
+@media (max-width: 393px) {
+  /* 移除此處的設定，全部移到下方iPhone設定中 */
+}
 
 /* 超小型手機 (更窄屏幕) */
 @media (max-width: 320px) {
   .carousel-item {
-    height:500px !important;
+    height: 500px;
   }
 
   .carousel-caption {
@@ -177,16 +180,16 @@ h2 {
 /* iPhone 及其他現代手機 (393px 到 430px) */
 @media (max-width: 430px) {
   .carousel-item {
-    height: 500px !important; /* 增加高度，確保內容完整顯示 */
-    overflow: visible !important; /* 允許內容溢出，避免裁剪 */
+    height: 500px !important; 
+    overflow: visible !important;
   }
   
   .carousel-item img {
-    height: 100%;
+    height: 100% !important;
     object-fit: cover;
-    object-position: center; /* 調整圖片垂直位置，顯示更多上部內容 */
+    object-position: center top !important; /* 顯示圖片頂部而不是中間 */
     width: 100%;
-    transform: none; /* 移除縮放，避免裁剪 */
+    transform: none !important; /* 不縮放 */
     max-width: 100%;
   }
   
