@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="./css/style.css">
 
 
-    <title>樂活全齡 照顧全民</title>
+    <title>聯絡我們｜樂活全齡 照顧全民</title>
     
   </head>
   <body>
-    <!-- 導航欄 -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+     <!-- 導航欄 -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="./image/logo01.png" alt="樂活全齡綜合診所 Logo">
@@ -30,23 +30,23 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home">首頁</a>
+              <a class="nav-link" href="index.html">首頁</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">關於全齡</a>
+              <a class="nav-link" href="aboutus.html">關於全齡</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#services">診療項目</a>
               
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctor">醫師介紹</a>
+              <a class="nav-link" href="doctor.html">醫師介紹</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#video-intro">衛教宣導</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">聯絡我們</a>
+              <a class="nav-link" href="contact.html">聯絡我們</a>
             </li>
           </ul>
         </div>
@@ -56,7 +56,7 @@
     <!-- 聯絡我們 -->
     <section id="contact" class="py-5 bg-light">
       <div class="container">
-        <h2 class="text-center mb-5">聯絡我們</h2>
+        <h2 class="text-center mb-5 fade-in">聯絡我們</h2>
         <div class="row">
           <div class="col-md-6 mb-4">
             <div class="contact-card">
@@ -109,21 +109,118 @@
             </div>
           </div>
         </div>
+        
+        <!-- 聯繫表單 -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <div class="contact-card">
+              <div class="card-header">
+                <h4><i class="bi bi-envelope-fill me-2"></i>聯繫我們</h4>
+              </div>
+              <div class="card-body">
+                <p class="lead mb-4">如有任何問題或預約需求，歡迎填寫下方表單，將使用您的郵件客戶端發送訊息給我們，我們將盡快回覆您。</p>
+                <form id="contactForm" class="contact-form" action="mailto:wowamin125@gmail.com" method="post" enctype="text/plain">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label for="name" class="form-label">姓名 <span class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label for="phone" class="form-label">電話 <span class="text-danger">*</span></label>
+                      <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">電子郵件 <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="subject" class="form-label">主旨</label>
+                    <input type="text" class="form-control" id="subject" name="subject">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">訊息內容 <span class="text-danger">*</span></label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="privacy" required>
+                    <label class="form-check-label" for="privacy">我同意隱私權政策並同意診所處理我的個人資料 <span class="text-danger">*</span></label>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-5">送出訊息</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- 頁尾 -->
-    <footer class="footer py-4">
-      <div class="container text-center">
-        <p class="mb-0">禁止任何網際網路服務業者轉錄其網路資訊之內容供人點閱。(但以網路搜尋或超連結方式，進入醫療機構之網址(域)直接點閱者，不在此限)
-       <p class="mb-0">© 2025 樂活全齡綜合診所 All rights reserved.</p>
-          
+ <!-- 頁尾 -->
+ <footer class="footer py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Logo區域 -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <div class="footer-logo-container">
+          <img src="./image/logo01.png" alt="樂活全齡綜合診所 Logo" class="footer-logo">
+          <h5 class="text-white mt-3">樂活全齡綜合診所</h5>
+          <p class="text-light small mt-2">專業醫療服務，照顧您全家健康</p>
+        </div>
       </div>
-    </footer>
+      
+   <!-- 網站導覽 -->
+   <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    <h5 class="text-white mb-3">網站導覽</h5>
+    <ul class="list-unstyled footer-nav">
+      <li class="mb-2"><a href="#home"><i class="fa-solid fa-house me-2"></i>首頁</a></li>
+      <li class="mb-2"><a href="#about"><i class="bi bi-info-circle me-2"></i>關於全齡</a></li>
+      <li class="mb-2"><a href="#services"><i class="fa-solid fa-list me-2"></i>診療項目</a></li>
+      <li class="mb-2"><a href="aboutus.html"><i class="fa-solid fa-stethoscope me-2"></i>醫師介紹</a></li>
+      <li class="mb-2"><a href="#video-intro"><i class="bi bi-play-circle me-2"></i>衛教宣導</a></li>
+      <li class="mb-2"><a href="#contact"><i class="fa-solid fa-envelope me-2"></i>聯絡我們</a></li>
+    </ul>
+  </div>
+  
+  <!-- 聯絡資訊 -->
+  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    <h5 class="text-white mb-3">聯絡資訊</h5>
+    <ul class="list-unstyled footer-contact">
+      <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>臺南市仁德區中正路二段1225號</li>
+      <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i>06-2791515</li>
+    </ul>
+  </div>
+  
+  <!-- 社群連結 -->
+  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+    <h5 class="text-white mb-3">關注我們</h5>
+    <div class="social-icons">
+      <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="me-2"><i class="bi bi-line"></i></a>
+    </div>
+  </div>
+</div>
 
+<hr class="footer-divider my-4">
 
-    
+<!-- 版權聲明 -->
+<div class="row">
+  <div class="col-12 text-center">
+    <p class="mb-1 small">禁止任何網際網路服務業者轉錄其網路資訊之內容供人點閱。(但以網路搜尋或超連結方式，進入醫療機構之網址(域)直接點閱者，不在此限)</p>
+    <p class="mb-0 small">© 2025 樂活全齡綜合診所 All rights reserved.</p>
+  </div>
+</div>
+</div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+<!-- 添加頁尾信息 -->
+<div class="to-top-container">
+  <a href="#" class="to-top-button"><i class="bi bi-arrow-up-circle-fill"></i></a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/form.js"></script>
+</body>
 </html>
