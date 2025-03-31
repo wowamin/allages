@@ -1,6 +1,5 @@
-
-h2{
-  font-size: 28PX;
+h2 {
+  font-size: 28px;
   font-weight: bold;
   color: #555;
 }
@@ -81,7 +80,7 @@ h2{
 /* 手機裝置 (小於 768px) */
 @media (max-width: 768px) {
   .carousel-item {
-    height: 400px;
+    height: 350px;
   }
   
   .carousel-caption {
@@ -103,7 +102,7 @@ h2{
 /* 小型手機 (小於 576px) */
 @media (max-width: 576px) {
   .carousel-item {
-    height: 400px;
+    height: 250px;
   }
   
   .carousel-caption {
@@ -125,7 +124,7 @@ h2{
 /* 特小型手機 (小於 393px) */
 @media (max-width: 393px) {
   .carousel-item {
-    height: 500px;
+    height: 200px;
   }
   
   .carousel-caption {
@@ -262,6 +261,8 @@ h2{
   }
 } 
 
+
+
 /* 確保比例正確 */
 .ratio-16x9 {
   position: relative;
@@ -302,7 +303,6 @@ h2{
     margin-bottom: 1.5rem;
   }
 }
-
 
 /* 聯絡我們區塊樣式 */
 .contact-card {
@@ -398,4 +398,3 @@ h2{
     font-size: 1.3rem;
   }
 }
-
