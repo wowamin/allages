@@ -251,6 +251,17 @@ h2 {
 }
 
 /* 影片區塊樣式 */
+
+.hh3 {
+  padding-bottom: 10px;
+  font-size: 28px;
+}
+
+.lead {
+  line-height: 1.5;
+  font-size: 20px;
+}
+
 .video-container {
   box-shadow: 0 8px 15px rgba(0,0,0,0.1);
   border-radius: 8px;
@@ -259,10 +270,12 @@ h2 {
   padding: 0;
 }
 
+
 .video-container img {
   transition: transform 0.5s ease;
   display: block;
 }
+
 
 .video-container img:hover {
   transform: scale(1.03);
