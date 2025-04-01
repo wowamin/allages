@@ -16,6 +16,11 @@ h2 {
   color: #555;
 }
 
+.navbar {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1));
+
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;
