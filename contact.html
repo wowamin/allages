@@ -7,8 +7,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     
-    
-    
+    <!-- 聯繫表單縮小樣式 -->
+    <style>
+      /* 只針對頂部的聯繫表單 */
+      form#contactForm {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      /* 確保整個區塊縮小 */
+      .row.mt-4 {
+        display: flex;
+        justify-content: center;
+      }
+
+      .row.mt-4 .col-12 {
+        max-width: 68%;
+      }
+
+      .row.mt-4 .contact-card .card-header {
+        padding: 1rem;
+      }
+
+      .row.mt-4 .contact-card .card-body {
+        padding: 1.5rem;
+      }
+
+      .row.mt-4 .contact-card .form-control {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+      }
+
+      .row.mt-4 .contact-card .form-label {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .row.mt-4 .contact-card .lead {
+        font-size: 1rem;
+      }
+
+      .row.mt-4 .contact-card textarea.form-control {
+        min-height: 100px;
+      }
+
+      .row.mt-4 .contact-card .btn {
+        padding: 0.5rem 2rem;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .row.mt-4 .col-12 {
+          max-width: 90%;
+        }
+        form#contactForm {
+          max-width: 100%;
+        }
+      }
+
+      /* 明確指定 #contact 區塊的卡片保持原樣 */
+      #contact .contact-card {
+        max-width: 100% !important;
+      }
+    </style>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -58,7 +119,7 @@
     <meta name="description" content="本院由家庭醫學專科、骨科專科醫師提供成人與小兒各項醫療服務，並設有X光機檢查與復健治療。
     包含：三高與各式急慢性疾病、常見皮膚疾患、感冒喉嚨痛鼻炎、腸胃道疾病與骨科疾患。">
     <meta name="keywords" content="台南家醫科,家醫科診所,家庭醫學,全齡綜合診所,全齡診所,樂活全齡,兒科疾病,慢性整合醫學,社區與預防醫學">
-    <title>樂活全齡綜合診所 | 樂活全齡 照顧全民</title>
+    <title> 聯絡我們 | 樂活全齡綜合診所 | 樂活全齡 照顧全民</title>
   </head>
   <body>
      <!-- 導航欄 -->
@@ -152,10 +213,9 @@
     </section>
 
 
-      <!-- 聯絡我們 -->
-      <section id="contact" class="py-5 bg-light">
+      <!-- 診所及交通資訊 -->
+     <section id="contact" class="py-5 bg-light">
         <div class="container">
-          <h2 class="text-center mb-5 fade-in">聯絡我們</h2>
           <div class="row">
             <div class="col-md-6 mb-4">
               <div class="contact-card">
@@ -208,7 +268,9 @@
               </div>
             </div>
           </div>
- <!-- 頁尾 -->
+      </section>
+
+   <!-- 頁尾 > -->
  <footer class="footer py-4">
   <div class="container">
     <div class="row">
