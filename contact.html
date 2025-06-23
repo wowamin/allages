@@ -69,6 +69,22 @@
       #contact .contact-card {
         max-width: 100% !important;
       }
+
+      @media (min-width: 393px) and (max-width: 430px) {
+        .carousel-item,
+        .carousel-item img,
+        .carousel-inner,
+        .carousel {
+          height: 320px !important;
+          max-height: 320px !important;
+          min-height: 320px !important;
+        }
+        .carousel-item img {
+          object-fit: cover !important;
+          object-position: center top !important;
+          width: 100%;
+        }
+      }
     </style>
 
     <!-- Bootstrap CSS -->

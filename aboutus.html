@@ -17,33 +17,7 @@
     <!-- iOS 設備特定樣式修正 -->
     <style>
       /* 針對 iOS 設備的修正 */
-      @supports (-webkit-touch-callout: none) {
-        .carousel-item {
-          height: 500px !important;
-          overflow: visible !important;
-        }
-        
-        .carousel-item img {
-          height: 100% !important;
-          object-fit: cover;
-          object-position: center top !important; /* 顯示圖片頂部 */
-          width: 100%;
-          transform: none !important;
-          max-width: 100%;
-        }
-
-        /* 修正 iOS Safari 上的輪播固定高度問題 */
-        picture {
-          display: block;
-          height: 100%;
-        }
-        
-        /* 確保輪播容器不會被截斷 */
-        .carousel {
-          max-height: 500px;
-          overflow: visible;
-        }
-      }
+     
     </style>
 
     <!-- Preconnect 提前建立連接 -->

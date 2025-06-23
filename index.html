@@ -44,6 +44,39 @@
           overflow: visible;
         }
       }
+
+      @media (min-width: 393px) and (max-width: 430px) {
+        .carousel-item,
+        .carousel-item img,
+        .carousel-inner,
+        .carousel {
+          height: 320px !important;
+          max-height: 320px !important;
+          min-height: 320px !important;
+        }
+        .carousel-item img {
+          object-fit: cover !important;
+          object-position: center top !important;
+          width: 100%;
+        }
+      }
+
+      /* 針對小螢幕的特定樣式 */
+      @media screen and (max-width: 576px) {
+        .carousel-item {
+          overflow: hidden;
+        }
+        .carousel-item img {
+          width: 100% !important;
+          height: auto !important;
+          max-width: 100vw !important;
+          object-fit: contain !important;
+        }
+        .carousel {
+          max-width: 100%;
+          overflow: hidden;
+        }
+      }
     </style>
 
     <!-- Preconnect 提前建立連接 -->
@@ -106,10 +139,12 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <picture>       
+              <source media="(max-width: 320px)" srcset="image/BANNER_320.jpg">
+              <source media="(max-width: 430px)" srcset="image/BANNER_430.jpg">
               <source media="(max-width: 576px)" srcset="image/BANNER_576.jpg">
               <source media="(max-width: 768px)" srcset="image/BANNER_768.jpg">
               <source media="(max-width: 1024px)" srcset="image/BANNER_1024.jpg">
-              <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="lazy" decoding="async">
+              <img src="image/BANNER_1920.jpg" class="d-block w-100" alt="樂活全齡診所廣告" loading="lazy" decoding="async" style="width: 100%; height: auto; max-width: 100vw;">
             </picture>
           </div>
         </div>
