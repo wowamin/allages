@@ -101,7 +101,7 @@ h2 {
 /* 平板裝置 (768px 到 1024px) */
 @media (max-width: 1024px) {
   .carousel-item {
-    height: 500px;
+    height: auto;
   }
   
   .carousel-caption h1 {
@@ -116,7 +116,7 @@ h2 {
 /* 手機裝置 (小於 768px) */
 @media (max-width: 768px) {
   .carousel-item {
-    height: 500px;
+    height: auto;
   }
   
   .carousel-caption {
@@ -138,7 +138,7 @@ h2 {
 /* 小型手機 (小於 576px) */
 @media (max-width: 576px) {
   .carousel-item {
-    height: 500px;
+    height: auto;
   }
   
   .carousel-caption {
@@ -165,7 +165,7 @@ h2 {
 /* 超小型手機 (更窄屏幕) */
 @media (max-width: 320px) {
   .carousel-item {
-    height: 500px;
+    height: auto;
   }
 
   .carousel-caption {
@@ -185,7 +185,7 @@ h2 {
 /* iPhone 及其他現代手機 (393px 到 430px) */
 @media (max-width: 430px) {
   .carousel-item {
-    height: 500px !important; 
+    height: auto !important; 
     overflow: visible !important;
   }
   
