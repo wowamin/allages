@@ -184,7 +184,7 @@ h2 {
 /* 小型手機 (小於 576px) */
 @media (max-width: 576px) {
   .carousel-item {
-    height:1200px;
+    height:auto;
   }
   
   .carousel-caption {
@@ -227,7 +227,7 @@ h2 {
 /* iPhone 及其他現代手機 (393px 到 430px) */
 @media (max-width: 430px) {
   .carousel-item {
-    height: 1200px !important; 
+    height: auto !important; 
     overflow: visible !important;
   }
   
