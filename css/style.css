@@ -203,15 +203,11 @@ h2 {
   }
 }
 
-/* 特小型手機 (小於 393px)，這個設定將被下方iPhone設定覆蓋 */
-@media (max-width: 393px) {
-  /* 移除此處的設定，全部移到下方iPhone設定中 */
-}
 
 /* 超小型手機 (更窄屏幕) */
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .carousel-item {
-    height: 1200px;
+    height: auto;
   }
 
   .carousel-caption {
