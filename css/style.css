@@ -960,11 +960,12 @@ h2 {
   .banner-img {
     width: 100vw;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
+    background: #f8f8f8;
     display: block;
     margin: 0 auto;
-        }
-      }
+  }
+}
 
 @media (max-width: 576px) {
   .carousel,
@@ -999,5 +1000,5 @@ body {
     object-fit: cover;
     display: block;
     margin: 0 auto;
-        }
-      }
+  }
+}
