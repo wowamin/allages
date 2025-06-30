@@ -953,9 +953,16 @@ h2 {
   .carousel-inner,
   .carousel-item,
   .banner-picture {
-    height: 400px;
-    max-height: 400px;
-    min-height: 400px;
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+  }
+  .banner-img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 }
 
