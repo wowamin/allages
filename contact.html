@@ -139,7 +139,7 @@
   </head>
   <body>
      <!-- 導航欄 -->
-     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+ <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="./image/logo01.png" alt="樂活全齡綜合診所 Logo">
@@ -157,9 +157,8 @@
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">關於診所</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="aboutus.html">診所簡介</a></li>
-                <li><a class="dropdown-item" href="doctor.html">醫師介紹</a></li>
-                <li><a class="dropdown-item" href="environment.html">環境介紹</a></li>
-                <li><a class="dropdown-item" href="#">交通資訊</a></li>
+                <li><a class="dropdown-item" href="doctor.html">醫師介紹</a></li>          
+                <li><a class="dropdown-item" href="#" href="#traffic">交通資訊</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">掛號資訊</a></li>
               </ul>
@@ -348,8 +347,61 @@
   <a href="#" class="to-top-button"><i class="bi bi-arrow-up-circle-fill"></i></a>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="./js/main.js"></script>
-<script src="./js/form.js"></script>
+ <!-- JS -->
+     <script src="./js/traffic.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+      <script>
+    // 頁面載入後執行
+    document.addEventListener('DOMContentLoaded', function() {
+      // 懶加載圖片
+      const lazyImages = document.querySelectorAll('.lazy-load');
+      
+      // 添加淡入動畫
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      // 在視窗滾動時檢查元素是否在視窗中
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('lazy-load')) {
+              // 如果是懶加載圖片
+              entry.target.classList.add('loaded');
+              if (entry.target.dataset.src) {
+                entry.target.src = entry.target.dataset.src;
+              }
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      
+      // 觀察所有懶加載圖片
+      lazyImages.forEach(img => {
+        observer.observe(img);
+      });
+      
+      // 觀察所有淡入元素
+      fadeElements.forEach(el => {
+        observer.observe(el);
+      });
+      
+      // 回到頂部按鈕功能
+      const toTopButton = document.querySelector('.to-top-button');
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 200) {
+          toTopButton.classList.add('show');
+        } else {
+          toTopButton.classList.remove('show');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
