@@ -165,8 +165,21 @@ h2 {
 
 /* 手機裝置 (小於 768px) */
 @media (max-width: 768px) {
-  .carousel-item {
-    height: 800px;
+  .carousel,
+  .carousel-inner,
+  .carousel-item,
+  .banner-picture {
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+  }
+  .banner-img {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+    background: #f8f8f8;
+    display: block;
+    margin: 0 auto;
   }
   
   .carousel-caption {
