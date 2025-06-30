@@ -25,8 +25,18 @@
     包含：三高與各式急慢性疾病、常見皮膚疾患、感冒喉嚨痛鼻炎、腸胃道疾病與骨科疾患。">
     <meta name="keywords" content="台南家醫科,家醫科診所,家庭醫學,全齡綜合診所,全齡診所,樂活全齡,兒科疾病,慢性整合醫學,社區與預防醫學">
     <title>樂活全齡綜合診所 | 樂活全齡 照顧全民</title>
-    
+      <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 避免 sticky 導覽列遮住標題，可選 */
+  #traffic {
+    scroll-margin-top: 100px;
+  }
+</style>
   </head>
+
   <body>
      <!-- 導航欄 -->
      <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -48,7 +58,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="aboutus.html">診所簡介</a></li>
                 <li><a class="dropdown-item" href="doctor.html">醫師介紹</a></li>          
-                <li><a class="dropdown-item" href="index.html">交通資訊</a></li>
+                <li><a class="dropdown-item" href="./index.html#traffic">交通資訊</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">掛號資訊</a></li>
               </ul>
@@ -250,8 +260,8 @@
             </div>
           </div>
           <div class="col-md-6 mb-4">
-            <div class="contact-card">
-              <div class="card-header" id="traffic">
+            <div class="contact-card" id="traffic" >
+              <div class="card-header">
                 <h4><i class="bi bi-pin-map-fill me-2"></i>交通方式</h4>
               </div>
               <div class="card-body">
