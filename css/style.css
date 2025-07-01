@@ -101,6 +101,34 @@ h2 {
   will-change: transform;
 }
 
+
+
+.text-center{
+  line-height: 1.9;
+
+}
+
+.doctor {
+  padding-top:5%;
+  padding-bottom: 5%;
+}
+
+.container h2 {
+  display: block;
+  font-size: 34px;
+ 
+  
+}
+.item{
+  padding-top: 5%;
+}
+
+.item .row{
+  
+  padding-bottom: 5%;
+}
+
+
 /* 為所有輪播圖添加圖片預加載，提高性能 */
 @media (prefers-reduced-motion: no-preference) {
   .carousel-item img {
@@ -309,12 +337,21 @@ h2 {
 
 .hh3 {
   padding-bottom: 10px;
-  font-size: 28px;
+  font-size: 24px;
+  font-weight: bolder;
+  color:#535353;
 }
 
 .lead {
+  width: 80%;
   line-height: 1.5;
-  font-size: 20px;
+  font-size: 18px;
+  color:#666768;
+  font-weight: 500;
+}
+
+.list-unstyled li{
+  color:#666768;
 }
 
 .video-container {
@@ -337,9 +374,11 @@ h2 {
 }
 
 .video-container .text-center {
-  padding: 15px;
+  padding: 30px;
   background-color: #f8f9fa;
 }
+
+
 
 .video-thumbnail-overlay {
   position: absolute;
@@ -389,8 +428,9 @@ h2 {
   }
   
   #video-intro h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     margin-bottom: 1.5rem;
+    font-weight: bolder;
   }
   
   #video-intro .lead {
