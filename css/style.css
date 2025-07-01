@@ -52,7 +52,7 @@ h2 {
 
 .navbar {
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.1));
-
+  position: sticky;
 }
 
 .navbar-brand {
