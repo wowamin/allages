@@ -128,6 +128,24 @@ h2 {
   padding-bottom: 5%;
 }
 
+.col-md-6 {
+  padding: 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 為所有輪播圖添加圖片預加載，提高性能 */
 @media (prefers-reduced-motion: no-preference) {
