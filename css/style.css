@@ -146,7 +146,6 @@ h2 {
 
 
 
-
 /* 為所有輪播圖添加圖片預加載，提高性能 */
 @media (prefers-reduced-motion: no-preference) {
   .carousel-item img {
